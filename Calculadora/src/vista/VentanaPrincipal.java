@@ -20,6 +20,10 @@ import controlador.Eventos;
 
 public class VentanaPrincipal extends JFrame{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JLabel numero1, numero2, resultado, logo, titulo, contraseña, solucion;
 	private JTextField num1, num2;
 	private JButton suma, resta, multiplicar, dividir, raiz2, raiz3;
