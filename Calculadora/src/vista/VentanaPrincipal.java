@@ -41,7 +41,7 @@ public class VentanaPrincipal extends JFrame{
 		setResizable(false);
 		setTitle("Aplicación");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("logo.png"));
-		setLayout(null);
+		getContentPane().setLayout(null);
 		inicializarComponentes();
 		setVisible(true);
 	}
@@ -61,9 +61,9 @@ public class VentanaPrincipal extends JFrame{
 			titulo = new JLabel("Calculadora");
 			titulo.setHorizontalAlignment(SwingConstants.CENTER);
 			titulo.setFont(font.deriveFont(Font.BOLD, 40f));
-			titulo.setBounds(0,20,400,80);
+			titulo.setBounds(87,20,289,80);
 			titulo.setForeground(Color.blue);
-			add(titulo);
+			getContentPane().add(titulo);
 		} catch (FontFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -76,70 +76,76 @@ public class VentanaPrincipal extends JFrame{
 		numero1.setBounds(100,120,60,30);
 		numero1.setFont(font);
 		numero1.setFont(font);
-		add(numero1);
+		getContentPane().add(numero1);
 		
 		num1 = new JTextField();
 		num1.setBounds(165, 120, 110, 30);
 		num1.setBorder(BorderFactory.createLineBorder(colores));
 		num1.setFont(font);
-		add(num1);
+		getContentPane().add(num1);
 		
 		numero2 = new JLabel("Numero 2:");
 		numero2.setBounds(100,180,60,30);
 		numero2.setFont(font);
-		add(numero2);
+		getContentPane().add(numero2);
 		
 		num2 = new JTextField();
 		num2.setBounds(165, 180, 110, 30);
 		num2.setBorder(BorderFactory.createLineBorder(colores));
 		num2.setFont(font);
-		add(num2);
+		getContentPane().add(num2);
 		
 		suma = new JButton("Sumar");
 		suma.setBounds(40, 260, 120, 40);
 		suma.setBackground(colores);
 		suma.setFont(font);
-		add(suma);
+		getContentPane().add(suma);
 		
 		resta = new JButton("Restar");
 		resta.setBounds(220, 260, 120, 40);
 		resta.setBackground(colores);
 		resta.setFont(font);
-		add(resta);
+		getContentPane().add(resta);
 		
 		multiplicar = new JButton("Multiplicar");
 		multiplicar.setBounds(40, 340, 120, 40);
 		multiplicar.setBackground(colores);
 		multiplicar.setFont(font);
-		add(multiplicar);
+		getContentPane().add(multiplicar);
 		
 		dividir = new JButton("Dividir");
 		dividir.setBounds(220, 340, 120, 40);
 		dividir.setBackground(colores);
 		dividir.setFont(font);
-		add(dividir);
+		getContentPane().add(dividir);
 		
 		raiz2 = new JButton("Raiz 2");
 		raiz2.setBounds(40, 420, 120, 40);
 		raiz2.setBackground(colores);
 		raiz2.setFont(font);
-		add(raiz2);
+		getContentPane().add(raiz2);
 		
 		raiz3 = new JButton("Raiz 3");
 		raiz3.setBounds(220, 420, 120, 40);
 		raiz3.setBackground(colores);
 		raiz3.setFont(font);
-		add(raiz3);
+		getContentPane().add(raiz3);
 		
 		resultado = new JLabel("Resultado: ");
 		resultado.setBounds(40,500,80,30);
 		resultado.setFont(font);
-		add(resultado);
+		getContentPane().add(resultado);
 		
 		solucion = new JLabel("");
 		solucion.setBounds(110,500,250,30);
 		solucion.setFont(font);
-		add(solucion);
+		getContentPane().add(solucion);
+		
+		JLabel labelIcon = new JLabel("*");
+		labelIcon.setBounds(10, 20, 80, 96);
+		getContentPane().add(labelIcon);
+		ImageIcon img = new ImageIcon("calculator.png");
+		labelIcon.setIcon(img);
 		
 		
 	}
@@ -297,7 +303,4 @@ public class VentanaPrincipal extends JFrame{
 	public void setRaiz3(JButton raiz3) {
 		this.raiz3 = raiz3;
 	}
-
-
-
 }
