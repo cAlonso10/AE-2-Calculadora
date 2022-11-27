@@ -51,7 +51,7 @@ public class Eventos implements ActionListener{
 				} else if(ventanaPrincipal.getNum2().getText().isEmpty()){
 					ventanaPrincipal.getSolucion().setText("No puedes dejar ningún campo vacio");	
 				} else {
-					float resta = Float.parseFloat(ventanaPrincipal.getNum1().getText()) - Integer.parseInt(ventanaPrincipal.getNum2().getText());
+					float resta = Float.parseFloat(ventanaPrincipal.getNum1().getText()) - Float.parseFloat(ventanaPrincipal.getNum2().getText());
 					String restaStr = String.valueOf(resta);  
 					ventanaPrincipal.getSolucion().setText(restaStr);
 					ventanaPrincipal.getNum1().setText("");
@@ -71,7 +71,7 @@ public class Eventos implements ActionListener{
 				} else if(ventanaPrincipal.getNum2().getText().isEmpty()){
 					ventanaPrincipal.getSolucion().setText("No puedes dejar ningún campo vacio");	
 				} else {
-					float multi = Float.parseFloat((ventanaPrincipal.getNum1().getText())) * (Integer.parseInt(ventanaPrincipal.getNum2().getText()));
+					float multi = Float.parseFloat((ventanaPrincipal.getNum1().getText())) * (Float.parseFloat(ventanaPrincipal.getNum2().getText()));
 					String multiStr = String.valueOf(multi);  
 					ventanaPrincipal.getSolucion().setText(multiStr);
 					ventanaPrincipal.getNum1().setText("");
@@ -91,7 +91,7 @@ public class Eventos implements ActionListener{
 				} else if(ventanaPrincipal.getNum2().getText().isEmpty()){
 					ventanaPrincipal.getSolucion().setText("No puedes dejar ningún campo vacio");	
 				} else {
-					float dividir = Float.parseFloat((ventanaPrincipal.getNum1().getText()))/(Integer.parseInt(ventanaPrincipal.getNum2().getText()));
+					float dividir = Float.parseFloat((ventanaPrincipal.getNum1().getText()))/(Float.parseFloat(ventanaPrincipal.getNum2().getText()));
 					String dividirStr = String.valueOf(dividir);  
 					ventanaPrincipal.getSolucion().setText(dividirStr);
 					ventanaPrincipal.getNum1().setText("");
